@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+/* mongoose-currency no longer works */
 
 var commentSchema = new Schema({
     rating: {
@@ -29,6 +30,27 @@ var dishSchema = new Schema({
     description: {
         type: String,
         required: true
+    },
+    image: {
+        type: String,
+        required: true
+    },
+    category: {
+        type: String,
+        required: true
+    },
+    label: {
+        type: String,
+        default: ''
+    },
+    price: {
+        type: String,
+        required: true,
+        min: 0
+    },
+    featured: {
+        type: Boolean,
+        default: false
     },
     comments: [commentSchema]
 }, {
