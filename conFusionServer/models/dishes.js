@@ -29,7 +29,7 @@ var dishSchema = new Schema({
     },
     description: {
         type: String,
-        required: true
+        required: true,
     },
     image: {
         type: String,
@@ -44,7 +44,7 @@ var dishSchema = new Schema({
         default: ''
     },
     price: {
-        type: String,
+        type: Number,
         required: true,
         min: 0
     },
